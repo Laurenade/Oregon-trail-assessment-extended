@@ -1,0 +1,28 @@
+// The Traveler class (blueprint) should set the following 
+// properties for each instance:
+//  -- a name, which must be provided as a parameter to the constructor.
+//  -- an amount of food, with an initial value of 1.
+//  -- an isHealthy property, with an initial value of true, which 
+//      indicates whether a traveler is sick.
+// The Traveler class should also have the following methods:
+//      -- hunt() - Increases the traveler's food by 2.
+//      -- eat() - Consumes 1 unit of the traveler's food. If the 
+//          traveler doesn't have any food left to eat, the traveler 
+//          is no longer healthy (set isHealthy to false).
+
+
+class Traveler {
+    constructor (name) {
+        this.name = name
+        this.food = 1
+        this.isHealthy = true
+    //     this.isGoodBoy = Boolean("of course")
+    }
+
+    hunt() {
+
+    }
+    eat() {
+
+    }
+}
