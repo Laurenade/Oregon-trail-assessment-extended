@@ -10,19 +10,20 @@
 //          traveler doesn't have any food left to eat, the traveler 
 //          is no longer healthy (set isHealthy to false).
 
-
 class Traveler {
     constructor (name) {
         this.name = name
         this.food = 1
         this.isHealthy = true
-    //     this.isGoodBoy = Boolean("of course")
     }
-
     hunt() {
-
+        this.food = this.food + 2
     }
     eat() {
-
+        if (this.food >= 1) {
+            this.food = this.food - 1
+        } else {
+        this.isHealthy = false
+        }
     }
 }

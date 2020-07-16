@@ -13,23 +13,34 @@
 //      -- totalFood() - Returns the total amount of food among all 
 //          passengers in the wagon.
 
-
 class Wagon {
     constructor (capacity) {
         this.capacity = capacity
         this.passengers = []
-    //     this.isGoodBoy = Boolean("of course")
     }
     getAvailableSeatCount() {
-
+        return this.capacity - this.passengers.length
     }
     join(traveler) {
-
+        if (this.getAvailableSeatCount() > 0) {
+            this.passengers.push(traveler)
+        }
     }
     shouldQuarantine() {
-
+        for (let index = 0; index < this.passengers.length; index += 1){
+            let currentPassenger = this.passengers[index]
+                if (currentPassenger.isHealthy === false) {
+                    return true
+                } 
+        } 
+                    return false
     }
     totalFood() {
-
+        let totalFood = 0
+        for (let index = 0; index < this.passengers.length; index += 1){
+            let currentPassenger = this.passengers[index] 
+            totalFood = totalFood + currentPassenger.food
+        }
+        return totalFood
     }
 }
